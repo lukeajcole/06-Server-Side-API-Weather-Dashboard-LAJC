@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Weather Dashboard</h1>
+    </div>
+
+    <div class="row">
+        <div id='searchCont' style="background-color:antiquewhite" class="col-3 m-2 border d-flex  flex-column align-items-center">
+            <h2 class="text-center m-1 p-2">Search For a City</h2>
+            <input id='searchInput' class="m-2 p-2 b" type='text' placeholder="Enter a city name...">
+            <button id='searchBtn' class="m-1 p-2 btn-lg">Search</button>
+        </div>
+        <div id="mainCol" class="col-8">
+            <div id="dayWeather" class="row-12 border justify-content-space-around p-2 m-2">
+            </div>
+            <div id="forcastDays" class="row-12 d-flex flex-wrap">
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src= "./assets/js/script.js"></script>
+</body>
+</html>

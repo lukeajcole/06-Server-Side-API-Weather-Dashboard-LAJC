@@ -1,0 +1,21 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    color: #000000;
+    background-color: grey;
+  }
+
+.header {
+    padding: 20px;
+    text-align: center;
+    /* background: #0536a1; */
+    color: white;
+    font-size: 30px;
+    background-image: linear-gradient(to right, rgb(119, 0, 255) , rgb(255, 187, 0));
+  }
+
+  .forCard {
+    min-width: 10rem;
+    width: 14rem;
+  }
