@@ -156,11 +156,15 @@ function makeDayCard(weatherData){
     var humEl = $("<h3>")
         humEl.addClass("p-2");
         humEl.text('Humidity: ' + weatherData.current.humidity + "%");
+    var uvRow = $("<div>");
+    uvRow.addClass('row');
     var uvEl = $("<h3>")
-        uvEl.addClass("p-2");
-        uvEl.text('UV Index: ' + weatherData.current.uvi);
+        uvEl.addClass("p-2 d-inline w-auto");
+        uvEl.text('UV Index:');
+        var indexEl = getUVIndexEl(weatherData.current.uvi)
+    uvRow.append(uvEl, indexEl);
     
-        dayWeatherEl.append(headEl, tempEl, windEl,humEl,uvEl);
+        dayWeatherEl.append(headEl, tempEl, windEl,humEl,uvRow);
 }
 
 function makeForcastCards(weatherData){
@@ -229,3 +233,27 @@ function handleUnixDate(dt){
 }
 
 
+function getUVIndexEl(val){
+    var indexEl = $("<div>");
+    indexEl.addClass('border rounded-pill p-3 d-inline w-auto text-center font-weight-bold')
+    var color;
+
+    
+    indexEl.text(val);
+
+    if (val <= 2){
+        color = 'green';
+    } else if(val <=5){
+        color = 'yellow';
+    } else if(val <=7){
+        color = 'orange';
+    } else if(val <=10){
+        color = 'red';
+    } else if(val >= 11){
+        color = 'violet';
+    }
+
+    indexEl.css("background-color", color);
+    console.log('INDEX EL');
+    return indexEl;   
+}
